@@ -1,0 +1,11 @@
+import { useState, useEffect } from "react";
+import { Dashboard } from "./components/Dashboard";
+import { MarketView } from "./components/MarketView";
+import { PortfolioView } from "./components/PortfolioView";
+import { AchievementsView } from "./components/AchievementsView";
+import { TutorialDialog } from "./components/TutorialDialog";
+import { MentorAssistant } from "./components/MentorAssistant";
+import { AchievementNotification } from "./components/AchievementNotification";
+import { Stock, Portfolio, Achievement, Transaction } from "./types";
+import { generateInitialStocks, updateStockPrices } from "./utils/market";
+import { checkAchievements } from "./utils/achievements";
