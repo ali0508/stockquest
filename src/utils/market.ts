@@ -1,4 +1,4 @@
-import { Stock } from '../types';
+import type { Stock } from '../types';
 
 export const generateInitialStocks = (): Stock[] => {
   return [

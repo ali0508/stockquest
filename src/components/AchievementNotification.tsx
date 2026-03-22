@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "motion/react";
-import { Achievement } from "../types";
+import type { Achievement } from "../types";
 import { Trophy, Sparkles } from "lucide-react";
 
 interface AchievementNotificationProps {

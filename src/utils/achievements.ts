@@ -1,4 +1,4 @@
-import { Achievement, Transaction, Portfolio } from '../types';
+import type { Achievement, Transaction, Portfolio } from '../types';
 
 const achievementTemplates: Omit<Achievement, 'unlocked' | 'unlockedAt' | 'progress'>[] = [
   {

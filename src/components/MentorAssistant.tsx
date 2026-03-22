@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Transaction } from '../types';
+import type { Transaction } from '../types';
 import { Card } from './ui/card';
 import { Button } from './ui/button';
 import { MessageCircle, X } from 'lucide-react';

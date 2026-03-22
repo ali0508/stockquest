@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Stock, Holding } from '../types';
+import type { Stock, Holding } from '../types';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';

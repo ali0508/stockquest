@@ -1,4 +1,4 @@
-import { Portfolio, Stock, Transaction, Achievement } from '../types';
+import type { Portfolio, Stock, Transaction, Achievement } from '../types';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { TrendingUp, TrendingDown, DollarSign, Activity, Award } from 'lucide-react';
 
@@ -134,7 +134,7 @@ export function Dashboard({ portfolio, stocks, transactions, achievements }: Das
         <CardContent>
           <div className="space-y-2">
             <div className="p-3 bg-blue-50 rounded-lg">
-              <p className="text-xs"><strong>💡 Diversification</strong></p>
+              <p className="text-xs"><strong>�� Diversification</strong></p>
               <p className="text-xs text-gray-700 mt-1">
                 Spread investments across different sectors to reduce risk.
               </p>

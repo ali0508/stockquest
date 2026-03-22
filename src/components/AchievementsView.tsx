@@ -1,4 +1,4 @@
-import { Achievement } from '../types';
+import type { Achievement } from '../types';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Progress } from './ui/progress';
 import { Lock } from 'lucide-react';
