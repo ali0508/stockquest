@@ -5,6 +5,7 @@ export interface Stock {
   change: number;
   changePercent: number;
   sector: string;
+  type: 'stock' | 'etf';
   description: string;
   volatility: number;
 }

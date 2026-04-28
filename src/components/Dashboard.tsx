@@ -17,11 +17,11 @@ export function Dashboard({ portfolio, stocks, transactions, achievements }: Das
     <div className="space-y-4">
       <div className="grid grid-cols-2 gap-3">
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-1 pt-3 px-3">
             <CardTitle className="text-xs">Total Value</CardTitle>
             <DollarSign className="h-3 w-3 text-muted-foreground" />
           </CardHeader>
-          <CardContent>
+          <CardContent className="px-3 pb-3">
             <div className="text-indigo-900">${portfolio.totalValue.toFixed(2)}</div>
             <p className={`text-xs ${portfolioChangePercent >= 0 ? 'text-green-600' : 'text-red-600'}`}>
               {portfolioChangePercent >= 0 ? '+' : ''}{portfolioChangePercent.toFixed(2)}%
@@ -30,11 +30,11 @@ export function Dashboard({ portfolio, stocks, transactions, achievements }: Das
         </Card>
 
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-1 pt-3 px-3">
             <CardTitle className="text-xs">Cash</CardTitle>
             <Activity className="h-3 w-3 text-muted-foreground" />
           </CardHeader>
-          <CardContent>
+          <CardContent className="px-3 pb-3">
             <div className="text-indigo-900">${portfolio.cash.toFixed(2)}</div>
             <p className="text-xs text-muted-foreground">
               Available
@@ -43,7 +43,7 @@ export function Dashboard({ portfolio, stocks, transactions, achievements }: Das
         </Card>
 
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-1 pt-3 px-3">
             <CardTitle className="text-xs">Gain/Loss</CardTitle>
             {portfolio.totalGainLoss >= 0 ? (
               <TrendingUp className="h-3 w-3 text-green-600" />
@@ -51,7 +51,7 @@ export function Dashboard({ portfolio, stocks, transactions, achievements }: Das
               <TrendingDown className="h-3 w-3 text-red-600" />
             )}
           </CardHeader>
-          <CardContent>
+          <CardContent className="px-3 pb-3">
             <div className={`text-indigo-900`}>
               ${Math.abs(portfolio.totalGainLoss).toFixed(2)}
             </div>
@@ -62,11 +62,11 @@ export function Dashboard({ portfolio, stocks, transactions, achievements }: Das
         </Card>
 
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-1 pt-3 px-3">
             <CardTitle className="text-xs">Awards</CardTitle>
             <Award className="h-3 w-3 text-muted-foreground" />
           </CardHeader>
-          <CardContent>
+          <CardContent className="px-3 pb-3">
             <div className="text-indigo-900">{unlockedAchievements}/{achievements.length}</div>
             <p className="text-xs text-muted-foreground">
               Unlocked
@@ -79,7 +79,7 @@ export function Dashboard({ portfolio, stocks, transactions, achievements }: Das
         <CardHeader>
           <CardTitle className="text-sm">Market Overview</CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="px-3 pb-3">
           <div className="space-y-2">
             {stocks.slice(0, 4).map(stock => (
               <div key={stock.symbol} className="flex items-center justify-between text-sm">
@@ -102,7 +102,7 @@ export function Dashboard({ portfolio, stocks, transactions, achievements }: Das
         <CardHeader>
           <CardTitle className="text-sm">Recent Transactions</CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="px-3 pb-3">
           {transactions.length === 0 ? (
             <p className="text-gray-500 text-center py-4 text-sm">No transactions yet</p>
           ) : (
@@ -131,7 +131,7 @@ export function Dashboard({ portfolio, stocks, transactions, achievements }: Das
         <CardHeader>
           <CardTitle className="text-sm">Investment Tips</CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="px-3 pb-3">
           <div className="space-y-2">
             <div className="p-3 bg-blue-50 rounded-lg">
               <p className="text-xs"><strong>�� Diversification</strong></p>

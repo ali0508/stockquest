@@ -60,7 +60,7 @@ export function TutorialDialog({ open, onOpenChange }: TutorialDialogProps) {
         </DialogHeader>
 
         <div className="py-4">
-          <p className="text-gray-700">{currentStep.content}</p>
+          <p className="text-black-700">{currentStep.content}</p>
         </div>
 
         <div className="flex gap-2">
